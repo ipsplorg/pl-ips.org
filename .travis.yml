@@ -1,0 +1,31 @@
+dist: xenial
+os: linux
+
+language: ruby
+rvm: 2.6
+cache: bundler
+
+addons:
+  apt:
+    packages:
+      - ncftp
+
+env:
+  global:
+    - JEKYLL_ENV=production
+
+deploy:
+  skip_cleanup: true
+  provider: script
+  script: bash script/cideploy
+  on:
+    branch: master
+
+script: script/cibuild
+install: script/bootstrap
+before_install: gem update --system
+
+notifications:
+  slack:
+    rooms:
+      secure: 'UVr7Rzr9p1FjUiWrLxvFDUzZLJ8rp4k0fZWvQhGov4EMlZtM1jBSWqPfTHnRZec7D3MPlQ2FVbVdDU3DNLy1gn/Shd6AZld+9sItI1H/7BNjhchY64XaUQsCGcg5LLRzkyeAALeu9aTJJuQm1nccwMrz+jGwMGTonNDlEXctx5xRiSf4Vbd+4tuIjKKcMrBmalUKUWgGhRHqgmmBsJvQF29J26QQAwB6TiPeYhsUhJOmlyhzXqCLhER+ZqUEf8Z2DQwWzwD2vNPWWHCbvp7/ojp2kkfI30x8OVpP5wG7pDRkNoaDlQyWgbWUayKFgNwWD8iQ4BKqtwfWdGsZUvjHOciFIlc2HvEXlw10EMv8al5hjbgRqGTpP7xzT7KGA7SOpvAB/mlp0oEXQ/iyM1iEwVQch7Hjn0JiMchEe6iZfZVg7KFJv2BF/JdIMYIPeBf3euYn16PMOS2egLywihQ5fU4o9oMwvTIqQAEAncc8ZgKyfyXV0qcYOe0L8bt7w6JyER0ctc88f0zqY5CjbLofjeLWptU5B/wCKs27Eryi/3gQx6uZ0yK/UIUeG+4PyyhBdeB4wJD84i/XFhrqJrbjOB+2xOnM1RjwbWNskhMy0xHzrUFYvNQY5WmsDJBqTCjzkvlfK/9kiVRUwTKHFiDCggj+oGzhXOJgqxyyX2lfktI='

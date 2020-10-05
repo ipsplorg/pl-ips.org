@@ -1,0 +1,22 @@
+---
+layout: default
+---
+
+<section class="jumbotron rounded-0 bg-red" style="height: 60vh">
+    <div class="d-flex justify-content-center align-items-center h-100 w-100">
+        <div class="container h-100 w-100 d-flex justify-content-center align-items-end">
+            <div class="row">
+                <div class="col-12 text-center">
+                    <h2>{{ page.title }}</h2>
+                    {% if page.description %}
+                        <p>{{ page.description }}</p>
+                    {% endif %}
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<section class="container bg-light">
+    {{ content }}
+</section>

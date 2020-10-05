@@ -1,0 +1,51 @@
+<div class="modal fade" id="cookies-modal" data-backdrop="static" data-keyboard="false" tabindex="-1" role="dialog">
+    <div class="modal-dialog modal-dialog-centered modal-dialog-scrollable">
+        <div class="modal-content bg-light rounded-0">
+            <div class="modal-body">
+                <p>Nasza strona internetowa używa plików cookies (tzw. ciasteczka) w celach statystycznych, reklamowych oraz funkcjonalnych. Dzięki nim możemy indywidualnie dostosować stronę do Twoich potrzeb. Podstawą przetwarzania cookies jest Twoja zgoda. W każdej chwili możesz cofnąć zgodę poprzez zmianę ustawień przeglądarki lub w sposób wskazany w naszej <a href="https://bip.pl-ips.org/files/polityka-prywatnosci.pdf">polityce prywatności</a>.</p>
+                <p>Administratorem Twoich danych jest Fundacja Instytut Progresywnego Społeczeństwa, ul. Twarda 18, 00-105 Warszawa. Z pełnymi zasadami możesz zapoznać się w naszych dedykowanych klauzulach informacyjnych.</p>
+            </div>
+            <div class="modal-footer">
+                <button type="button" class="btn bg-red rounded-0" id="cookies-button" data-dismiss="modal">Akceptuję</button>
+            </div>
+        </div>
+    </div>
+</div>
+
+<div class="modal fade" id="custom-price-modal" data-backdrop="static" data-keyboard="false" tabindex="-2" role="dialog">
+    <div class="modal-dialog modal-dialog-centered" role="document">
+        <div class="modal-content rounded-0 bg-light">
+            <div class="modal-header">
+                <h5 class="modal-title" id="exampleModalLongTitle">Inna kwota</h5>
+                <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                    <span aria-hidden="true">&times;</span>
+                </button>
+            </div>
+
+            <div class="modal-body text-center">
+                <p>Wpisz wartość:</p>
+                <input id="custom-price" type="number" class="text-center rounded-0 border-0" min="5" placeholder="10" oninput="this.value = Math.abs(this.value) > 0 ? Math.abs(this.value) : null" style="margin-bottom: 1rem">
+                <p class="small-text">Minimalny wolumen: 5 PLN</p>
+            </div>
+
+            <div class="modal-footer">
+                <button type="button" class="btn submit--button bg-red rounded-0 activated" data-mode="modal" data-recurring="true">Wpłacam co miesiąc</button>
+                <button type="button" class="btn submit--button bg-red rounded-0 activated" data-mode="modal">Wpłacam jednorazowo</button>
+            </div>
+        </div>
+    </div>
+</div>
+
+<div class="modal fade" id="redirect-modal" data-backdrop="static" data-keyboard="false" tabindex="-3" role="dialog">
+    <div class="modal-dialog modal-dialog-centered" role="document">
+        <div class="modal-content rounded-0 bg-light">
+            <div class="modal-body text-center">
+                <div class="spinner-border text-danger" role="status">
+                    <span class="sr-only"></span>
+                </div>
+
+                <p>Kierowanie do bezpiecznej bramki płatności...</p>
+            </div>
+        </div>
+    </div>
+</div>

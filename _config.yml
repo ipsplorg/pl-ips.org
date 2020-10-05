@@ -1,0 +1,14 @@
+url: https://pl-ips.org
+title: Instytut Progresywnego Społeczeństwa
+description: Jesteśmy think-tankiem lepszej zmiany.
+
+logo: /assets/logo/image.png
+social:
+  name: Instytut Progresywnego Społeczeństwa
+  links:
+    - https://facebook.com/ipsplorg
+    - https://twitter.com/ipsplorg
+
+encoding: UTF-8
+plugins: ['jekyll-seo-tag']
+exclude: ['Gemfile', 'Gemfile.lock', 'README.md', 'script']

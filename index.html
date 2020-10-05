@@ -1,0 +1,41 @@
+---
+layout: parallax
+---
+
+<section class="bg-red" id="about">
+    <div class="container">
+        <div class="row">
+            <div class="col-12">
+                <h2>O Fundacji</h2>
+
+                <div class="row">
+                    <div class="col-md-6 text-center">
+                        <img src="{{ site.url }}/assets/logo/white.png" height="250" alt="Instytut Progresywnego Społeczeństwa">
+                    </div>
+
+                    <div class="col-md-6 text-left">
+                        <p><i>Instytut Progresywnego Społeczeństwa</i> to progresywny think-tank zajmujący się działalnością społeczną i doradztwem w segmencie publicznym. Nasz zakres obejmuje m.in. prawa człowieka, tworzenie społeczeństwa otwartego, zrównoważony rozwój, solidarności społecznej, ochronę środowiska i popularyzacje wydarzeń kulturalnych.</p>
+
+                        <ul class="list-inline list-unstyled">
+                            <li class="list-inline-item">
+                                <a href="{{ site.url }}/o-fundacji" class="not-animated">
+                                    <button type="button" class="btn bg-white rounded-0">O Fundacji</button>
+                                </a>
+                            </li>
+
+                            <li class="list-inline-item">
+                                <a href="{{ site.url }}/zespol" class="not-animated">
+                                    <button type="button" class="btn bg-white rounded-0">Zespół</button>
+                                </a>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<section class="container bg-light" id="team">
+    {% include team.html %}
+</section>

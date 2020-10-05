@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        {% include head.html %}
+    </head>
+
+    <body>
+        <header>
+            {% include header.html %}
+        </header>
+
+        <main>
+            {{ content }}
+
+            <section class="bg-red">
+                <div class="container">
+                    <div class="text-center">
+                        <h2>Newsletter</h2>
+                        <p>Bądź na bieżąco - zapisz się do naszej listy mailingowej. Same najważniejsze informacje.</p>
+
+                        {% include newsletter.html %}
+                    </div>
+                </div>
+            </section>
+        </main>
+
+        <footer class="footer bg-gray">
+            {% include footer.html %}
+        </footer>
+
+        {% include modals.html %}
+        {% include script.html %}
+    </body>
+</html>
